@@ -6,7 +6,7 @@ const eqArrays = (arg1, arg2) => {
   return bool;
 };
 
-const asssertArraysEqual = (arr1, arr2) => {
+const assertArraysEqual = (arr1, arr2) => {
   let result = eqArrays(arr1, arr2);
   if (result) {
     console.log("✅✅✅ The arrays ", arr1, " and ", arr2, " are identical.");
@@ -16,8 +16,8 @@ const asssertArraysEqual = (arr1, arr2) => {
 };
 
 // Test cases
-asssertArraysEqual([1, 2, 3], [1, 2, 3]) // => true
-asssertArraysEqual([1, 2, 3], [3, 2, 1]) // => false
+assertArraysEqual([1, 2, 3], [1, 2, 3]) // => true
+assertArraysEqual([1, 2, 3], [3, 2, 1]) // => false
 
-asssertArraysEqual(["1", "2", "3"], ["1", "2", "3"]) // => true
-asssertArraysEqual(["1", "2", "3"], ["1", "2", 3]) // => false
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]) // => true
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]) // => false
