@@ -1,6 +1,13 @@
 const eqArrays = (arg1, arg2) => {
   let bool = true;
-  for (let i = 0; i < arg1.length; i++) {
+  let maxLength;
+  if (arg1.length > arg2.length) {
+    maxLength = arg1.length;
+  } else {
+    maxLength = arg2.length;
+  }
+
+  for (let i = 0; i < maxLength; i++) {
     bool = bool && (arg1[i] === arg2[i]);
   }
   return bool;
