@@ -1,26 +1,5 @@
-const eqArrays = (arg1, arg2) => {
-  let bool = true;
-  let maxLength;
-  if (arg1.length > arg2.length) {
-    maxLength = arg1.length;
-  } else {
-    maxLength = arg2.length;
-  }
-
-  for (let i = 0; i < maxLength; i++) {
-    bool = bool && (arg1[i] === arg2[i]);
-  }
-  return bool;
-};
-
-const assertArraysEqual = (arr1, arr2) => {
-  let result = eqArrays(arr1, arr2);
-  if (result) {
-    console.log("✅✅✅ The arrays ", arr1, " and ", arr2, " are identical.");
-  } else {
-    console.log("🛑🛑🛑 The arrays ", arr1, " and ", arr2, " are not identical.");
-  }
-};
+// const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = arr => {
   let mid = []; // Empty array initialized
@@ -39,10 +18,12 @@ const middle = arr => {
   return mid;
 };
 
+module.exports = middle;
+
 // Test cases:
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1,2,3]), [2]);
-assertArraysEqual(middle([1,2,3,4,5]), [3]);
-assertArraysEqual(middle([1,2,3,4]), [2,3]);
-assertArraysEqual(middle([1,2,3,4,5,6]), [3,4]);
+// assertArraysEqual(middle([1]), []);
+// assertArraysEqual(middle([1, 2]), []);
+// assertArraysEqual(middle([1,2,3]), [2]);
+// assertArraysEqual(middle([1,2,3,4,5]), [3]);
+// assertArraysEqual(middle([1,2,3,4]), [2,3]);
+// assertArraysEqual(middle([1,2,3,4,5,6]), [3,4]);
