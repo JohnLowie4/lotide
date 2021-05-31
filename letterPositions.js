@@ -1,3 +1,7 @@
+const eqArrays = require('./eqArrays');
+
+const assertArraysEqual = require('./assertArraysEqual');
+
 const letterPositions = function(sentence) {
   const results = {};
   
@@ -12,38 +16,16 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const eqArrays = (arg1, arg2) => {
-  let bool = true;
-  let maxLength;
-  if (arg1.length > arg2.length) {
-    maxLength = arg1.length;
-  } else {
-    maxLength = arg2.length;
-  }
-
-  for (let i = 0; i < maxLength; i++) {
-    bool = bool && (arg1[i] === arg2[i]);
-  }
-  return bool;
-};
-
-const assertArraysEqual = (arr1, arr2) => {
-  let result = eqArrays(arr1, arr2);
-  if (result) {
-    console.log("✅✅✅ The arrays ", arr1, " and ", arr2, " are identical.");
-  } else {
-    console.log("🛑🛑🛑 The arrays ", arr1, " and ", arr2, " are not identical.");
-  }
-};
+module.exports = letterPositions;
 
 // Test cases
-const test = letterPositions("hello");
+// const test = letterPositions("hello");
 
-assertArraysEqual(test["e"], [1]);
-assertArraysEqual(test["l"], [2,3]);
+// assertArraysEqual(test["e"], [1]);
+// assertArraysEqual(test["l"], [2,3]);
 
-const lighthouse = letterPositions("lighthouse in the house");
+// const lighthouse = letterPositions("lighthouse in the house");
 
-assertArraysEqual(lighthouse["h"], [3, 5, 15, 18]);
-assertArraysEqual(lighthouse["e"], [9, 16, 22]);
-assertArraysEqual(lighthouse["u"], [7, 20]);
+// assertArraysEqual(lighthouse["h"], [3, 5, 15, 18]);
+// assertArraysEqual(lighthouse["e"], [9, 16, 22]);
+// assertArraysEqual(lighthouse["u"], [7, 20]);
