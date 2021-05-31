@@ -12,3 +12,25 @@
 // assertEqual(words.length, 3); // original array should still have 3 elements!
 
 const assert = require('chai').assert;
+const tail = require('../tail');
+
+describe("#tail", () => {
+  const result = tail(["Hello", "Lighthouse", "Labs"]);
+  it("should return 2 for length of result", () => {
+    assert.equal(result.length, 2);
+  });
+
+  it("should return 'Lighthouse' for result[0]", () => {
+    assert.strictEqual(result[0], "Lighthouse");
+  });
+
+  it("should return 'Labs' for result[1]", () => {
+    assert.strictEqual(result[1], "Labs");
+  });
+
+  it("should return 3 for length of words", () => {
+    const words = ["Yo YO", "Lighthouse", "Labs"];
+    tail(words);
+    assert.strictEqual(words.length, 3);
+  });
+});
