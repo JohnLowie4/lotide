@@ -1,5 +1,5 @@
 {
-  "name": "@JohnLowie4/lotide",
+  "name": "@jzlowie/lotide",
   "version": "1.0.0",
   "description": "JohnLowie4 lotide library, part of the Lighthouse Labs curriculum",
   "main": "assertArraysEqual.js",
