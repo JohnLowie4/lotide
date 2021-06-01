@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@JohnLowie4lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "JohnLowie4 lotide library, part of the Lighthouse Labs curriculum",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/JohnLowie4/lotide.git"
   },
-  "author": "",
+  "author": "John Lowie <jzlowie@gmail.com> (https://github.com/JohnLowie4)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JohnLowie4/lotide/issues"
